@@ -1,0 +1,258 @@
+body {
+    font-family: puffin-arcade-nerf, sans-serif;                /*custom font*/
+    font-weight: 800;                                           /*custom font weight*/
+    font-style: normal;                                         /*custom font style*/
+	}
+
+.center {
+	width:800px;                                                /*breedte van je scherm (vakje waarin je game zit)*/
+	height:500px;                                               /*hoogte van je scherm (vakje waarin je game zit)*/
+	position:absolute;                                          /*positie van het landscape vakje*/
+    z-index: 0;                                                 /*positie is op z-as 0*/
+	left:50%;                                                   /*dit centreert het vak op de x-as*/
+	top:50%;                                                    /*dit centreert het vak op de y-as*/
+	margin:-250px 0 0 -400px;                                   /*dit centreert het vak*/
+	text-align:center;                                          /*zet de tekst in het midden*/
+	border: 3px solid #ff23be;                                /*zet een rand rond het vak*/
+	overflow: hidden;	                                        /*zit zorgt ervoor dat de achtergrond etc niet over de border gaat*/
+	background: black;                                        /*de achtergrond van het vak*/
+}
+
+.background {
+    width:800px;                                                /*achtergrond grootte in de breedte*/
+	height:500px;                                               /*achtergrond grootte in de hoogte*/
+	position:absolute;                                          /*de positie*/
+    background-repeat: no-repeat;                               /*achtergrond wordt 1x getoond*/
+}
+
+.disco {
+    width: 2400px;                                              /*breedte van de achtergrondfoto*/
+    height: 500px;                                              /*hoogte van de achtergrondfoto*/
+    z-index: 0;                                                 /*positie is op z-as 0*/
+    background-image: url(../images/loop.png);                  /*image als background*/
+	background-size: contain;                                   /*image wordt volledig getoond in de beschikbare ruimte*/
+    top: 0px;                                                   /*tegen de bovenkant geplaatst*/
+    animation-name: disco;                                      /*animatie voor looping background*/
+    animation-duration: 5s;                                     /*animatie duurt 5s, dit is de snelheid in feite*/
+    animation-iteration-count: infinite;                        /*animatie blijft zichzelf herhalen*/
+    animation-timing-function: linear;                          /*specificeert de snelheidskromme*/
+}
+
+@keyframes disco {
+	from {transform: translateX(0px); }                         /*animatie: zorgt ervoor dat het een looping background is*/
+	to {transform: translateX(-1200px);}
+}
+
+.player {
+	position: absolute;                                         /*positie van de player*/
+	top: 200px;                                                 /*begint op 200px van de bovenkant*/
+	left: -50px;                                                /*staat eerst buiten beeld links*/
+}
+
+.player img {
+	width: 75px;                                                /*grootte van de img die ik gebruik voor de player*/
+}
+
+.bier img {
+	width: 40px;                                                /*grootte van de img die ik gebruik voor het bier*/
+}
+
+.bier{
+	position: absolute;                                         /*positie van het bier*/
+	top:50px;                                                   /*begint op 50px van de bovenkant*/
+	left: 750px;                                                /*begint aan de rechter kant*/
+}                       
+
+.water{
+	position: absolute;                                         /*positie van het water*/
+	top:50px;                                                   /*begint op 50px van de bovenkant*/
+	left: 750px;                                                /*begint aan de rechter kant*/
+}
+
+.water img {
+	width: 40px;                                                /*grootte van de img die ik gebruik voor het water*/
+}
+
+div.startscreen h1 {
+    margin: 15px;                                               /*margin van de titel van het startscherm*/
+    font-family: puffin-arcade-nerf, sans-serif;                /*font van de titel van het startscherm*/
+    font-weight: 800;                                           /*gewicht van de titel van het startscherm*/
+    font-size: 1.3em;                                           /*grootte van de titel van het startscherm*/
+    font-style: normal;                                         /*stijl van de titel van het startscherm*/
+    color: white;                                             /*kleur van font van de titel van het startscherm*/
+    margin: auto;                                               /*positie (in het midden) van de titel van het startscherm*/
+    position: relative;                                         /*positie van de titel van het startscherm*/
+    left: 0px;                                                  /*positie (van de linkerkant) van de titel van het startscherm*/
+    top: -180px;                                                /*positie (van de bovenkant) van de titel van het startscherm*/
+}
+
+
+div.startscreen p {
+    margin: 15px;                                               /*margin van de tekst van het startscherm*/
+    color: white;                                             /*kleur van font van de tekst van het startscherm*/
+    margin-left: 320px;                                         /*positie (van links) van de tekst van het startscherm*/
+    line-height: 18px;                                          /*afstand tussen zinnen*/
+    position: relative;                                         /*positie van de tekst van het startscherm*/
+    margin: auto;                                               /*positie van de tekst (midden) van het startscherm*/
+	margin-top: -100px;                                         /*zet de tekst meer naar boven*/
+	margin-bottom: 20px;                                        /*zet de tekst meer naar boven*/
+    font-family: puffin-arcade-nerf, sans-serif;                /*font van de tekst van het startscherm*/
+    font-weight: 800;                                           /*gewicht van de tekst van het startscherm*/
+    font-style: normal;                                         /*stijl van de tekst van het startscherm*/
+    font-size: 1em;    
+    top: -70px;                                                 /*grootte van de tekst van het startscherm*/
+}
+
+p {
+    margin: 15px;                                               /*margin van de tekst algemeen*/
+    color: white;                                             /*kleur van font van de tekst algemeen*/
+    line-height: 18px;                                          /*afstand tussen zinnen van de tekst algemeen*/
+    position: relative;                                         /*positie van de tekst algemeen*/
+    left: 0px;                                                  /*links positioneren*/
+    top: 0px;                                                   /*links centreren*/
+    font-family: puffin-arcade-nerf, sans-serif;                /*font van de tekst algemeen*/
+    font-weight: 800;                                           /*gewicht van de tekst algemeen*/
+    font-style: normal;                                         /*stijl van de tekst algemeen*/
+}
+
+div.startscreen p.start {
+    margin:auto;                                                /*dit is hetzelfde als hierboven, maar hier is het voor de tekst op het startscherm*/
+    text-align: center;                                         /*tekst staat in het midden van de button*/
+    text-decoration: none;                                      /*geen lijntje eronder omdat het een link is*/
+    color: #ff23be;                                           /*kleur van tekst in de button*/
+    display: block;                                             /*soort display van de button, flex is hier bvb niet handig*/
+    background-color: white;                                  /*achtergrond kleur van de button*/
+    width: 100px;                                               /*breedte van de button*/
+    height: 28px;                                               /*hoogte van de button*/
+    border-radius: 50px;                                        /*maakt de button rond*/
+    border: 4px dotted #ff23be;                               /*geeft een dotted border rond de play button*/
+    font-size: 25px;                                            /*tekst grootte*/
+    padding-top: 10px;                                          /*maakt de button groter, meer plaats rond de tekst*/
+    font-weight: bold;                                          /*tekst is in bold*/
+    cursor: pointer;                                            /*soort muis als je op de button gaat staan*/
+}
+div.startscreen p.start:hover {
+    color: white;                                             /*opmaaak voor de button play als je erover hovert*/
+    background-color: #ff23be;                                /*zorgt voor een andere bgc als je hovert*/
+	border: 4px dotted white;                                 /*geeft een dotted border in een andere kleur rond de play button als je hovert*/
+}
+
+.startscreen {
+    color: white;                                             /*kleur is wit*/
+}
+
+.biertjes {
+    float: left;                                                /*score van bier staat links*/
+}
+
+.promille {
+    text-align: right;                                          /*score van promille staat rechts*/
+    margin-top: -35px;                                          /*score meer naar boven*/
+}
+
+.gameover {
+    visibility:hidden;                                          /*game over scherm is hidden totdat je verliest*/
+    color: #ff23be;                                           /*opmaak zoals hierboven beschreven, kleur, positie van de tekst...*/
+    text-align: center;
+    margin-top: 140px;
+    font-size: 32px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.winscreen {
+    visibility:hidden;                                          /*win scherm is hidden totdat je wint*/
+    color: #ff23be;                                           /*opmaak zoals hierboven beschreven, kleur, positie etc.*/
+    text-align: center;
+    margin-top: 140px;
+    font-size: 32px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.gameoverscore {
+    visibility:hidden;                                          /*score is hidden totdat je verliest*/
+    color: white;                                             /*opmaak zoals hierboven beschreven, kleur, positie etc.*/
+    text-align: center;
+    line-height: 20px;
+    margin-top: 40px;
+    font-size: 16px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.winscore {
+    visibility:hidden;                                          /*score is hidden totdat je wint*/
+    color: white;                                             /*opmaak zoals hierboven beschreven, kleur, positie etc.*/
+    text-align: center;
+    line-height: 20px;
+    margin-top: 40px;
+    font-size: 16px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.el {
+    height: 10vh;                                               /*grootte van het balletje bij het begin*/
+    padding: 1rem;
+  
+    background-image: url(../images/discobal.png);              /*achtergrond van het balletje (zijn de kleurtjes die je ziet)*/
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+    -webkit-mask-image: url(../images/bal-04.png);              /*mask over de bgi zodat het een cirkel wordt*/
+    -webkit-mask-size: 10vmin;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+
+	animation: discobal 5s infinite;                            /*animatie zodat het balletje beweegt rond het scherm*/
+
+  }
+
+.dance {
+	background-image: url(../images/sprite-07.png);             /*poppetje rechts dat danst op het beginscherm*/
+	background-repeat: no-repeat;
+	width: 106px;
+	height: 209px;
+	animation: dance 1s steps(2);                               /*is een sprite afbeelding dat lijkt te dansen door het gebruik van frame by frame (steps)*/
+	animation-iteration-count: infinite;                        /*blijft oneindig dansen*/
+	position: absolute; 
+  	bottom: 125px;                                              /*positioneert het mannetje*/
+  	right: 150px;
+}
+
+.dance2 {
+	background-image: url(../images/sprite-07.png);             /*poppetje links dat danst op het beginscherm*/
+	background-repeat: no-repeat;
+	width: 106px;
+	height: 209px;
+	animation: dance 1s steps(2);                               /*is een sprite afbeelding dat lijkt te dansen door het gebruik van frame by frame (steps)*/
+	animation-iteration-count: infinite;                        /*blijft oneindig dansen*/
+	animation-direction: reverse;                               /*zorgt ervoor dat de poppetjes omgekeerd dansen met dezelfde animatie*/
+	position: absolute;
+  	bottom: 125px;                                              /*positioneert het mannetje*/
+  	right: 545px;
+}
+
+  @keyframes discobal {                                                         /*laat het balletje bewegen rond het scherm (animatie bij balletje)*/
+	  0% {transform: translateX(-367px) translateY(-130px) rotate(0turn);}      /*startpositie links onder*/
+	  25% {transform: translateX(367px) translateY(-130px) rotate(4turn);}      /*gaat naar rechts onder in de hoek + draait*/
+	  50% {transform: translateX(367px) translateY(-560px) rotate(8turn);}      /*gaat naar rechts boven in de hoek + draait*/
+	  75% {transform: translateX(-367px) translateY(-560px) rotate(12turn);}    /*gaat naar links boven in de hoek + draait*/
+	  100% {transform: translateX(-367px) translateY(-130px) rotate(16turn);}   /*gaat naar links onder in de hoek + draait*/
+
+  }
+
+  @keyframes dance {                                            /*laat het mannetje dansen door gebruik te maken van een sprite afbeelding en telkens de andere te tonen (2 steps/frames)*/
+	0% {
+	  background-position: 0px 0;
+	}
+	100% {
+	  background-position: -212px 0;
+	}
+  }
